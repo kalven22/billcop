@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-billcopapi-dev-04749-authRole",
+      "UnauthRoleArn": "arn:aws:iam::795110213811:role/amplify-billcopapi-dev-04749-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::795110213811:role/amplify-billcopapi-dev-04749-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-billcopapi-dev-04749-deployment",
+      "UnauthRoleName": "amplify-billcopapi-dev-04749-unauthRole",
+      "StackName": "amplify-billcopapi-dev-04749",
+      "StackId": "arn:aws:cloudformation:us-east-1:795110213811:stack/amplify-billcopapi-dev-04749/701d80f0-0496-11ec-bbc1-0a90b7832da7",
+      "AmplifyAppId": "d1d6baxbjcti9g"
+    },
+    "categories": {
+      "auth": {
+        "billcopapi5569b905": {}
+      }
+    }
+  }
+}

@@ -1,6 +1,11 @@
 import { useState } from 'react';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import Bill from './components/Bill';
-import Edit from './components/Edit'
+import Edit from './components/Edit';
+
+Amplify.configure(config);
 
 function App() {
 
@@ -36,8 +41,12 @@ function App() {
         <Bill name="Netflix" status="1" deleteMode={deleteMode} /> 
       </div>
 
+      <div className="max-w-sm mx-auto">
+        <AmplifySignOut />
+      </div>
+
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
