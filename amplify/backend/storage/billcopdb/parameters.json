@@ -1,0 +1,7 @@
+{
+    "tableName": "billcopdb",
+    "partitionKeyName": "name",
+    "partitionKeyType": "S",
+    "sortKeyName": "owner",
+    "sortKeyType": "S"
+}

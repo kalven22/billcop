@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "billcopapi5569b905": {}
+      },
+      "function": {
+        "billcopapi5cb054b0": {
+          "deploymentBucketName": "amplify-billcopapi-dev-04749-deployment",
+          "s3Key": "amplify-builds/billcopapi5cb054b0-6171467354326262316c-build.zip"
+        }
       }
     }
   }

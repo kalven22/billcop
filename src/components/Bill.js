@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 const Bill = (props) => {
-  var payStatus = props.status === "1" ? true : false;
+  // eslint-disable-next-line
+  var payStatus = props.status == "1" ? true : false;
 
   const [isPaid, setPaid] = useState(payStatus);
   const [alertDisplay, setAlertDisplay] = useState(false);
