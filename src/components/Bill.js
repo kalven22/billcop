@@ -10,21 +10,22 @@ const Bill = (props) => {
   // console.log(clickCount)
   const markPaid = () => {
     if (isPaid) {
-      setAlertDisplay(true)
-      setTimeout(() => { setAlertDisplay(false) }, 500)
+      setAlertDisplay(true);
+      setTimeout(() => { setAlertDisplay(false) }, 500);
     }
     else {
-      setPaid(true)
+      setPaid(true);
     }
   }
 
-  const deleteBill = () => {
-    //impletement deleteBill
+  const handleDeleteBill = () => {
+    return props.deleteBill(props.name, props.status, props.owner);
   }
+
 
   return (
     <>
-      <button className={`Bill py-2 px-6 rounded-md shadow-md ${props.deleteMode ? 'bg-red-300': 'bg-white'}`} onClick={props.deleteMode ? deleteBill : markPaid}>
+      <button className={`Bill py-2 px-6 rounded-md shadow-md ${props.deleteMode ? 'bg-red-300': 'bg-white'}`} onClick={props.deleteMode ? handleDeleteBill : markPaid}>
         <div className="text-lg flex justify-between space-x-1">
           <div className={`font-semibold ${alertDisplay ? 'text-green-600 capitalize' : 'text-gray-800 uppercase'}`}>
             {alertDisplay ? 'Already Paid!' : props.name}

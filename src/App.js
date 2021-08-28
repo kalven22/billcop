@@ -8,6 +8,17 @@ import { Auth } from "aws-amplify";
 
 Amplify.configure(config);
 
+// const useToggle = (initialState = false) => {
+//   // Initialize the state
+//   const [state, setState] = useState(initialState);
+  
+//   // Define and memorize toggler function in case we pass down the comopnent,
+//   // This function change the boolean value to it's opposite value
+//   const toggle = useCallback(() => setState(state => !state), []);
+  
+//   return [state, toggle]
+// }
+
 function App() {
   const [bills, setbills] = useState([]);
   const [currentUser, setUser] = useState({});
@@ -31,22 +42,43 @@ function App() {
 
   const [deleteMode, setDeleteMode] = useState(false);
 
+  
   const toggleDeleteMode = () => {
+    // debugger;
     console.log("i am invoked");
-    setDeleteMode(!deleteMode);
     console.log(deleteMode);
+    setDeleteMode(!deleteMode);
+    
   };
+ 
 
   const addBill = (newBill) => {
-    API.post("billcoprestapi", "/items", {
-      body: {
-        name: newBill,
-        ispaid: 0,
-        owner: currentUser.username
-      },
-    }).then(() => {
-      setbills([...bills, newBill]);
-    });
+    // API.post("billcoprestapi", "/items", {
+    //   body: {
+    //     name: newBill,
+    //     ispaid: 0,
+    //     owner: currentUser.username
+    //   },
+    // }).then(() => {
+    //   setbills([...bills, newBill]);
+    // });
+  };
+  const deleteBill = (name, status, owner) => {
+    // API.del("billcoprestapi", "/items", {
+    //   body: {
+    //     name: name,
+    //     ispaid: status,
+    //     userid: currentUser.userid
+    //   },
+    // }).then(() => {
+    //   setbills([...bills, name]);
+    // });
+
+    // API.del("billcoprestapi", `/items/${name}`, {}).then(() => {
+    //   // setbills([...bills, name]);
+    // }).catch((error) => {
+    //   console.log(error);
+    // });
   };
 
   return (
@@ -71,7 +103,9 @@ function App() {
             key={index}
             name={bill.name}
             status={bill.ispaid}
+            owner = {currentUser.username}
             deleteMode={deleteMode}
+            deleteBill={deleteBill}
           />
         ))}
       </div>

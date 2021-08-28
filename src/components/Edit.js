@@ -26,15 +26,6 @@ const Edit = (props) => {
     closeForm();
     console.log(newBill);
 
-    //Write to database -- need to be implemented
-
-    // API.post('billcoprestapi', '/items', {
-    //     body: {
-    //         name: newBill,
-    //         owner:'test'
-    //     }
-    // })
-
     return props.addBill(newBill);
   };
 
@@ -58,7 +49,7 @@ const Edit = (props) => {
             props.deleteMode ? "bg-red-500" : "bg-gray-700"
           }`}
           onClick={() => {
-            console.log("from edit", props.deleteMode);
+            // console.log("from edit", props.deleteMode);
             return props.toggleDeleteMode();
           }}
         >

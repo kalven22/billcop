@@ -18,7 +18,7 @@
       "function": {
         "billcopapi5cb054b0": {
           "deploymentBucketName": "amplify-billcopapi-dev-04749-deployment",
-          "s3Key": "amplify-builds/billcopapi5cb054b0-6171467354326262316c-build.zip"
+          "s3Key": "amplify-builds/billcopapi5cb054b0-466c494c383570746144-build.zip"
         }
       }
     }

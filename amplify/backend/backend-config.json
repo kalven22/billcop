@@ -50,20 +50,5 @@
       ]
     }
   },
-  "api": {
-    "billcoprestapi": {
-      "service": "API Gateway",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "function",
-          "resourceName": "billcopapi5cb054b0",
-          "attributes": [
-            "Name",
-            "Arn"
-          ]
-        }
-      ]
-    }
-  }
+  "api": {}
 }
